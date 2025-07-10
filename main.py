@@ -3,11 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Korrekte CORS-Konfiguration
+# CORS erlauben
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=["*"],  # oder spezifisch: ["https://www.robertmroczynski.de"]
     allow_methods=["*"],
     allow_headers=["*"],
 )
